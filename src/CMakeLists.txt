@@ -1,7 +1,6 @@
 # Create an object library so we only have to build pdb.c once when producing
 # both static and shared library configurations.
 add_library(pdb_object OBJECT pdb.c)
-target_compile_options(pdb_object PRIVATE ${PDB_STRICT_COMPILE_OPTIONS})
 set_target_properties(pdb_object
   PROPERTIES
     POSITION_INDEPENDENT_CODE ON
